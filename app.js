@@ -1,0 +1,3 @@
+
+const canvas=document.getElementById('stars');
+if(canvas){const ctx=canvas.getContext('2d');let stars=[];function resize(){canvas.width=innerWidth*devicePixelRatio;canvas.height=innerHeight*devicePixelRatio;stars=Array.from({length:170},()=>({x:Math.random()*canvas.width,y:Math.random()*canvas.height,r:Math.random()*1.5+.25,p:Math.random()*6}))}function draw(){ctx.clearRect(0,0,canvas.width,canvas.height);for(const s of stars){s.p+=.012;ctx.globalAlpha=.2+Math.abs(Math.sin(s.p))*.7;ctx.fillStyle='#fff';ctx.beginPath();ctx.arc(s.x,s.y,s.r*devicePixelRatio,0,Math.PI*2);ctx.fill()}requestAnimationFrame(draw)}addEventListener('resize',resize);resize();draw()}
