@@ -14,4 +14,4 @@ let drag=false,px=0,py=0,rx=0,ry=0,rate=1;canvas.addEventListener('pointerdown',
 const slider=document.getElementById('spinrate');slider.addEventListener('input',()=>{rate=+slider.value;document.getElementById('rate').textContent=rate.toFixed(1)+'×'});
 function fit(){const w=canvas.clientWidth,h=canvas.clientHeight;renderer.setSize(w,h,false);camera.aspect=w/h;camera.updateProjectionMatrix()}new ResizeObserver(fit).observe(canvas);fit();
 function animate(){requestAnimationFrame(animate);ring.rotation.z+=.004*rate;ring2.rotation.z-=.002*rate;scene.rotation.y=ry;scene.rotation.x=rx;renderer.render(scene,camera)}animate();
-</script><footer>سفری از تولد ستاره تا تاریکیِ سیاه‌چاله 🌌<br>پروژه آموزشی فیزیک دهم · طراح: <strong>هستی حاجی صفری</strong><br><span class="caption">مطالب علمی با الهام از منابع آموزشی NASA</span></footer><script src="app.js"></script></body></html>
+</script><footer>سفری از تولد ستاره تا تاریکیِ سیاه‌چاله 🌌<br>پروژه آموزشی شیمی دهم · طراح: <strong>هستی حاجی صفری</strong><br><span class="caption">مطالب علمی با الهام از منابع آموزشی NASA</span></footer><script src="app.js"></script></body></html>
